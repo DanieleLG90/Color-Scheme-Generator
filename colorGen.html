@@ -7,8 +7,8 @@
 </head>
 <body>
     <header>
-        <form action="">
-            <input type="color">
+        <form action="#">
+            <input id="color-picker" type="color">
             <select name="colorScheme" id="colorScheme">
                 <option value="monochrome">Monochrome</option>
                 <option value="monochrome-dark">Monochrome-dark</option>
@@ -18,8 +18,9 @@
                 <option value="analogic-complement">Analogic-complement</option>
                 <option value="triad">Triad</option>
             </select>
-            <button>Get color Scheme</button>
+            <button id="btn-generate-color">Get color Scheme</button>
         </form>
+        <div style="height: 100px;" id="color-display"></div>
     </header>
 </body>
 <script src="colorGen.js"></script>
