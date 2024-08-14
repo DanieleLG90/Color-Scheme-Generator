@@ -14,17 +14,16 @@ fetch(api)
 
 function colorPicked(){
     let color = colorPicker.value
-    return color
-    //console.log(color)
-}
-
-function modePicked(){
-    let mode = colorScheme.value
-    return mode
+    const cleanColor= color.substring(1)
+    
 }
 
 btnGenerateColor.addEventListener('click', function(){
-    colorPicked()
-    colorDisplay.style.backgroundColor = colorPicked()
-    console.log(modePicked())
+    let api = `https://www.thecolorapi.com/scheme?hex=${colorPicked()}&mode=${colorScheme.value}&count=5`
+    //console.log(api)
+    
+    fetch(api)
+    .then(res => res.json())
+    .then(data => console.log(data.colors))
+    
 })
