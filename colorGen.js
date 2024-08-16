@@ -20,7 +20,7 @@ function colorPicked(){
 
 btnGenerateColor.addEventListener('click', function(){
     let api = `https://www.thecolorapi.com/scheme?hex=${colorPicked()}&mode=${colorScheme.value}&count=5`
-    //console.log(api)
+    
     
     fetch(api)
     .then(res => res.json())
