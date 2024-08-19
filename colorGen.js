@@ -24,6 +24,12 @@ btnGenerateColor.addEventListener('click', function(){
     
     fetch(api)
     .then(res => res.json())
-    .then(data => console.log(data.colors))
+    .then(data =>{
+        console.log(data.colors)
+        let colorArr = data.colors
+        colorArr.forEach(function(color){
+            console.log(color.hex.value)
+        })
+    })
     
 })
