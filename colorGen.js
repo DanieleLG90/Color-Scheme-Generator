@@ -27,9 +27,18 @@ btnGenerateColor.addEventListener('click', function(){
     .then(data =>{
         console.log(data.colors)
         let colorArr = data.colors
+        let colorVal = ''
         colorArr.forEach(function(color){
+            colorVal += `
+                <div class="colorElm">
+                    <div class="colorBack" style="background-color:${color.hex.value} ;"></div>
+                    <h2 class="colorHex">${color.hex.value}</h2>
+                </div>`
+            
             console.log(color.hex.value)
+            console.log(colorVal)
         })
+        colorDisplay.innerHTML = colorVal
     })
     
 })
