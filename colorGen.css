@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: aqua;
+    padding: 10px 8px;
+}
+
+input{
+    margin: 0 auto;
+    height: 45px;
+    width: 50%;
+}
+
+select{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+button{
+    grid-column: 1 / span 2;
+    margin-top: 15px;
+    padding: 10px 0;
+    font-size: 1rem;
+}
