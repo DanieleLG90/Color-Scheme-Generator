@@ -28,7 +28,7 @@ btnGenerateColor.addEventListener('click', function(){
         let colorVal = ''
         colorArr.forEach(function(color){
             colorVal += `
-                <div onclick="copyColorHex()" class="colorElm">
+                <div onclick="copyColorHex('${color.hex.value}')" class="colorElm">
                     <div class="colorBack" style="background-color:${color.hex.value} ;"></div>
                     <h2 class="colorHex">${color.hex.value}</h2>
                 </div>`
@@ -42,6 +42,6 @@ btnGenerateColor.addEventListener('click', function(){
 const colorElm = document.getElementsByClassName('colorElm')
 
 
-function copyColorHex(){
-    console.log ('dbclick')
+function copyColorHex(colorValue){
+    console.log (colorValue)
 }
