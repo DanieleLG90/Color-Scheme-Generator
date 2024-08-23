@@ -38,3 +38,5 @@ btnGenerateColor.addEventListener('click', function(){
     })
     
 })
+
+
