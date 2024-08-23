@@ -24,8 +24,6 @@ btnGenerateColor.addEventListener('click', function(){
     fetch(api)
     .then(res => res.json())
     .then(data =>{
-        console.log(data)
-        //console.log(data.colors)
         let colorArr = data.colors
         let colorVal = ''
         colorArr.forEach(function(color){

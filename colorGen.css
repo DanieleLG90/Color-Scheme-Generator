@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
+.main-container{
+    height: 100dvh;
+}
+
 header{
+    height: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: aqua;
@@ -33,14 +38,22 @@ button{
 }
 
 .color-display{
+    height: 80%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    
 }
 
 .colorElm{
+    grid-row: 1fr;
     display: flex;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .colorBack{
     width: 70%;
+}
+
+.colorHex{
+    margin: auto;
 }
