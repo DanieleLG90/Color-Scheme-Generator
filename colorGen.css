@@ -24,7 +24,7 @@ input{
     width: 45%;
     border: 2px solid lightgray;
     border-radius: 4px;
-    box-shadow: 0 2px 8px gray;
+    box-shadow: 0 2px 4px 2px gray;
 }
 
 select{
@@ -33,7 +33,7 @@ select{
     border: 2px solid lightgray;
     border-radius: 4px;
     background-color: whitesmoke;
-    box-shadow: 0 2px 8px gray;
+    box-shadow: 0 2px 4px 2px gray;
 }
 
 button{
@@ -44,7 +44,7 @@ button{
     background-color: whitesmoke;
     border: 2px solid lightgray;
     border-radius: 4px;
-    box-shadow: 0 2px 8px 2px gray;
+    box-shadow: 0 2px 4px 2px gray;
     cursor: pointer;
 }
 
@@ -68,4 +68,8 @@ button{
 
 .colorHex{
     margin: auto;
+}
+
+@media screen and (min-width: 960px) {
+    
 }
