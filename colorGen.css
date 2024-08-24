@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Alegreya", serif;
 }
 
 .main-container{
@@ -12,29 +13,39 @@ header{
     height: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: aqua;
+    background-color: whitesmoke;
     padding: 10px 8px;
+    box-shadow: 0 2px 4px gray;
 }
 
 input{
     margin: 0 auto;
     height: 45px;
     width: 45%;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px gray;
 }
 
 select{
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
+    border: 2px solid lightgray;
     border-radius: 4px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 8px gray;
 }
 
 button{
     grid-column: 1 / span 2;
     margin-top: 15px;
     padding: 10px 0;
-    font-size: 1rem;
-    border: 2px solid darkgray;
+    font-size: 1.25rem;
+    background-color: whitesmoke;
+    border: 2px solid lightgray;
     border-radius: 4px;
+    box-shadow: 0 2px 8px gray;
+    cursor: pointer;
 }
 
 .color-display{
@@ -48,6 +59,7 @@ button{
     grid-row: 1fr;
     display: flex;
     border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
 }
 
 .colorBack{
