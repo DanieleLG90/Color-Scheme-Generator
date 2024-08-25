@@ -98,8 +98,7 @@ button{
     }
     
     input{
-        display: flex;
-        justify-content: center;
+        height: 100%;
         width: 10%;
         margin: auto 0;
     }
@@ -108,13 +107,14 @@ button{
         width: 40%;
         padding: 3px 2px;
         font-size: 1.2rem;
+        letter-spacing: 8px;
     }
 
     button{
         width: 25%;
         margin-top: 0;
         padding: 0 ;
-        
+        letter-spacing: 4px;
     }
 
     .color-display{
