@@ -71,5 +71,65 @@ button{
 }
 
 @media screen and (min-width: 960px) {
+
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     
+    .main-container{
+        width: 60%;
+        height: 85%;
+        margin: auto;
+        border: 4px solid whitesmoke;
+        border-radius: 15px;
+        box-shadow: 10px 15px 15px gray;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        padding: 38px 3px;
+        box-shadow: none;
+    }
+    
+    input{
+        display: flex;
+        justify-content: center;
+        width: 10%;
+        margin: auto 0;
+    }
+
+    select{
+        width: 40%;
+        padding: 3px 2px;
+        font-size: 1.2rem;
+    }
+
+    button{
+        width: 25%;
+        margin-top: 0;
+        padding: 0 ;
+        
+    }
+
+    .color-display{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+    .colorElm{
+        
+        flex-direction: column;
+    }
+
+    .colorBack{
+        width: 100%;
+        height: 100%;
+    }
+
 }
