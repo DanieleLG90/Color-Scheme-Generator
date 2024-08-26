@@ -5,6 +5,11 @@
     font-family: "Alegreya", serif;
 }
 
+.circleBack{
+    height: 100vh;
+    width: 100vw;
+}
+
 .main-container{
     height: 100dvh;
 }
@@ -52,13 +57,14 @@ button{
     height: 80%;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1px;
+    background-color: whitesmoke;
     
 }
 
 .colorElm{
     grid-row: 1fr;
     display: flex;
-    border-bottom: 1px solid whitesmoke;
     cursor: pointer;
 }
 
@@ -70,9 +76,25 @@ button{
     margin: auto;
 }
 
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 25px 15px;
+    background-color: rgba(255, 255, 255, 0.753);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.2rem;
+    z-index: 9999;
+  }
+
 @media screen and (min-width: 960px) {
 
-    body{
+    body,
+    .circleBack{
         width: 100vw;
         height: 100vh;
         display: flex;

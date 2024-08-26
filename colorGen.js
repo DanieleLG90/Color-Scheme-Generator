@@ -4,13 +4,7 @@ const colorPicker = document.getElementById('color-picker')
 const colorScheme = document.getElementById('colorScheme')
 const btnGenerateColor = document.getElementById('btn-generate-color')
 const colorDisplay = document.getElementById('color-display')
-/*
-let api = "https://www.thecolorapi.com/scheme?hex=0047AB&mode=analogic&count=5"
-
-fetch(api)
-.then(res => res.json())
-.then(data => console.log(data.colors))
-*/
+const backChangingColor = document.getElementById('backChangingColor')
 
 function colorPicked(){
     let color = colorPicker.value
@@ -36,7 +30,8 @@ btnGenerateColor.addEventListener('click', function(){
 
         colorDisplay.innerHTML = colorVal
     })
-    
+    backChangingColor.style.backgroundColor = colorPicker.value
+    createAlert("Click on the color to copy it!", 2000);
 })
 
 const colorElm = document.getElementsByClassName('colorElm')
@@ -44,4 +39,21 @@ const colorElm = document.getElementsByClassName('colorElm')
 
 function copyColorHex(colorValue){
     console.log (colorValue)
+    backChangingColor.style.backgroundColor = colorValue
+    createAlert("Color copied!", 1000);
 }
+
+function createAlert(message, duration = 3000) {
+    // Create a new div element for the alert
+    const alertDiv = document.createElement('div');
+    alertDiv.classList.add('custom-alert');
+    alertDiv.textContent = message;
+  
+    // Append the alert div to the body
+    document.body.appendChild(alertDiv);
+  
+    // Set a timeout to remove the alert after the specified duration
+    setTimeout(() => {
+      alertDiv.remove();
+    }, duration);
+  }

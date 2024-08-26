@@ -9,30 +9,33 @@
     <link rel="stylesheet" href="colorGen.css">
     <title>Color Scheme Generator</title>
 </head>
-<body>
+<body >
+    <div class="circleBack" id="backChangingColor">
 
-    <div class="main-container">
+        <div class="main-container">
 
-        <header>
-            
-                <input id="color-picker" type="color">
-
-                <select name="colorScheme" id="colorScheme">
-                    <option value="monochrome">Monochrome</option>
-                    <option value="monochrome-dark">Monochrome-dark</option>
-                    <option value="monochrome-light">Monochrome-light</option>
-                    <option value="analogic">analogic</option>
-                    <option value="complement">Complement</option>
-                    <option value="analogic-complement">Analogic-complement</option>
-                    <option value="triad">Triad</option>
-                </select>
+            <header>
                 
-                <button id="btn-generate-color">Get color Scheme</button>
-        </header>
+                    <input id="color-picker" type="color">
 
-        <div class="color-display" id="color-display"></div>
+                    <select name="colorScheme" id="colorScheme">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome-dark</option>
+                        <option value="monochrome-light">Monochrome-light</option>
+                        <option value="analogic">analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-complement</option>
+                        <option value="triad">Triad</option>
+                    </select>
+                    
+                    <button id="btn-generate-color">Get color Scheme</button>
+            </header>
 
-    </div>  
+            <div class="color-display" id="color-display"></div>
+
+        </div> 
+
+</div> 
 </body>
 <script src="colorGen.js"></script>
 </html>
