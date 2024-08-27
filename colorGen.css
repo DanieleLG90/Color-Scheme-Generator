@@ -102,6 +102,20 @@ button{
         align-items: center;
     }
 
+    .circleBack{
+        background-color: #fff;
+    }
+
+    .animation{
+        animation: colorChange 3s ease-in-out infinite;
+    }
+
+    @keyframes colorChange {
+        to {
+            background-color: var(--end-color);
+        }
+    }
+
     
     .main-container{
         width: 60%;
@@ -142,6 +156,7 @@ button{
     .color-display{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: none;
+        padding-bottom: 15px;
     }
 
     .colorElm{
@@ -152,6 +167,10 @@ button{
     .colorBack{
         width: 100%;
         height: 100%;
+    }
+
+    .colorHex{
+        padding-top: 10px;
     }
 
 }
