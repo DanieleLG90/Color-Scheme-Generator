@@ -41,9 +41,11 @@ const colorElm = document.getElementsByClassName('colorElm')
 
 
 function copyColorHex(colorValue){
-    console.log (colorValue)
+    copyValue(colorValue)
+    //console.log (colorValue)
     backChangingColor.style.backgroundColor = colorValue
     createAlert("Color copied!", 1000);
+
 }
 
 function createAlert(message, duration = 3000) {
@@ -69,4 +71,9 @@ function backChanging(){
 function changeColor(color) {
     const endColor = color;
     backChangingColor.style.setProperty('--end-color', endColor);
+}
+
+function copyValue(hex){
+    navigator.clipboard.writeText(hex);
+    console.log('copy')
 }
