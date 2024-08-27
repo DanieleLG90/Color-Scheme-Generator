@@ -31,9 +31,9 @@ btnGenerateColor.addEventListener('click', function(){
         colorDisplay.innerHTML = colorVal
     })
     
-    setTimeout(backChanging, 1500)
+    setTimeout(backChanging, 3000)
     changeColor(colorPicker.value)
-    backChangingColor.classList.add('animation')
+    //backChangingColor.classList.add('animation')
     createAlert("Click on the color to copy it!", 2000);
 })
 
@@ -45,9 +45,8 @@ function copyColorHex(colorValue){
     //console.log (colorValue)
     backChangingColor.style.backgroundColor = colorValue
     createAlert("Color copied!", 1000);
-
 }
-
+// funzione per creare un messaggio (copia colori, colore copiato)
 function createAlert(message, duration = 3000) {
 
     const alertDiv = document.createElement('div');
@@ -65,7 +64,6 @@ function createAlert(message, duration = 3000) {
 
 function backChanging(){
     backChangingColor.style.backgroundColor = colorPicker.value
-    backChangingColor.classList.remove('animation')
 }
 
 function changeColor(color) {

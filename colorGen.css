@@ -107,7 +107,7 @@ button{
     }
 
     .animation{
-        animation: colorChange 3s ease-in-out infinite;
+        animation: colorChange 3s ease-in-out forwards;
     }
 
     @keyframes colorChange {
