@@ -31,20 +31,17 @@ btnGenerateColor.addEventListener('click', function(){
         colorDisplay.innerHTML = colorVal
     })
     
-
-    colorChangeFinal()
-    //changeColor()
+    changeColor(colorPicker.value)
     
     createAlert("Click on the color to copy it!", 2000);
 })
 
-const colorElm = document.getElementsByClassName('colorElm')
+
 
 
 function copyColorHex(colorValue){
+    changeColor(colorValue)
     copyValue(colorValue)
-    //console.log (colorValue)
-    backChangingColor.style.backgroundColor = colorValue
     createAlert("Color copied!", 1000);
 }
 // funzione per creare un messaggio (copia colori, colore copiato)
@@ -63,25 +60,11 @@ function createAlert(message, duration = 3000) {
     }, duration);
 }
 
-function changeColor() {
-    const endColor = colorPicker.value;
-    backChangingColor.style.setProperty('--end-color', endColor);
-}
-
-function colorChangeFinal(){
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes colorChange {
-        to {
-            background-color: ${colorPicker.value};
-        }
-        }
-    `;
-    document.head.appendChild(style);
+function changeColor(color){
+    backChangingColor.style.backgroundColor = color
 }
 
 // funzione per copiare il valore (hex)
 function copyValue(hex){
     navigator.clipboard.writeText(hex);
-    console.log('copy')
 }
