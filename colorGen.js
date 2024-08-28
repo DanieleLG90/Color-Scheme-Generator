@@ -31,9 +31,10 @@ btnGenerateColor.addEventListener('click', function(){
         colorDisplay.innerHTML = colorVal
     })
     
-    setTimeout(backChanging, 3000)
-    changeColor(colorPicker.value)
-    //backChangingColor.classList.add('animation')
+
+    colorChangeFinal()
+    //changeColor()
+    
     createAlert("Click on the color to copy it!", 2000);
 })
 
@@ -62,15 +63,24 @@ function createAlert(message, duration = 3000) {
     }, duration);
 }
 
-function backChanging(){
-    backChangingColor.style.backgroundColor = colorPicker.value
-}
-
-function changeColor(color) {
-    const endColor = color;
+function changeColor() {
+    const endColor = colorPicker.value;
     backChangingColor.style.setProperty('--end-color', endColor);
 }
 
+function colorChangeFinal(){
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes colorChange {
+        to {
+            background-color: ${colorPicker.value};
+        }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// funzione per copiare il valore (hex)
 function copyValue(hex){
     navigator.clipboard.writeText(hex);
     console.log('copy')

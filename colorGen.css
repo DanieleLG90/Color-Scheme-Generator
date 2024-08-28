@@ -103,19 +103,10 @@ button{
     }
 
     .circleBack{
-        background-color: #fff;
+        animation: colorChange 5s ease-in-out forwards;
     }
 
-    .animation{
-        animation: colorChange 3s ease-in-out forwards;
-    }
-
-    @keyframes colorChange {
-        to {
-            background-color: var(--end-color);
-        }
-    }
-
+    
     
     .main-container{
         width: 60%;
