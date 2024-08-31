@@ -1,5 +1,4 @@
 
-
 const colorPicker = document.getElementById('color-picker')
 const colorScheme = document.getElementById('colorScheme')
 const btnGenerateColor = document.getElementById('btn-generate-color')
